@@ -37,8 +37,15 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1"
-  }
+    "eslint-plugin-react": "^7.29.2",
+    "prettier": "2.5.1"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
