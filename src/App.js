@@ -1,18 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,Switch, Route,Link} from "react-router-dom";
 
 // import { Main } from 'pages';
 import Main from './pages/Main';
 
-const App=(props)=> {
-    console.log("App.js");
+const App=()=> {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" component={<Main />} />
-      </Routes>
-    </BrowserRouter>
+    <Switch>
+        <Route exact path="/" component={Main} />
+    </Switch>
   );
 }
 

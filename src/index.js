@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 // import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom'; 
 
-console.log("index.js");
 ReactDOM.render(
   <BrowserRouter>
     <App />
