@@ -1,16 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Main from "./pages/Main.js"
+// import { Main } from 'pages';
+import Main from './pages/Main';
 
 const App=(props)=> {
-  
+    console.log("App.js");
+
   return (
-    <Router>
-    <Route path="/" component={Main} />
-    {/* <Route path="/lionking" component={LionKing} />
-    <Route path="/spiderman" component={SpiderMan} /> */}
-  </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" component={<Main />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

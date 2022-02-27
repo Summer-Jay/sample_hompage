@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useMemo } from "react";
 
-import Header from "./src/components/HomepageMain/Header.js"
+import Header from "../components/HomepageMain/Header";
 
-const Main = () =>{
-
+const Main = (props) =>{
+    console.log("main.js")
     return(
         <Header/>
 
