@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useMemo, Component } from 'react';
+import React, { useEffect, useRef, useMemo, Component } from "react";
 
-import Header from '../components/HomepageMain/Header';
+import Header from "../components/HomepageMain/Header";
 
 const Main = (props) => {
-  console.log('main.js');
+  console.log("main.js");
 
   return <Header />;
 };

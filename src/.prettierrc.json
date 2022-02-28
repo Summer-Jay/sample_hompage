@@ -1,6 +1,9 @@
 {
-  "trailingComma": "es5",
-  "tabWidth": 2,
-  "semi": true,
-  "singleQuote": true
+  "terminal.integrated.shell.windows": "C:\\User\\aster\\cmd.exe",
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 4,
+  "prettier.trailingComma": "all",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "security.workspace.trust.untrustedFiles": "open"
 }

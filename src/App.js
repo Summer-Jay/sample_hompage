@@ -1,17 +1,16 @@
 import React from 'react';
-import {
-  BrowserRouter as Switch, Route} from "react-router-dom";
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
 
+import 'styles';
 // import { Main } from 'pages';
 import Main from './pages/Main';
 
-const App=()=> {
-
+const App = () => {
   return (
     <Switch>
-        <Route exact path="/" component={Main} />
+      <Route exact path="/" component={Main} />
     </Switch>
   );
-}
+};
 
 export default App;
