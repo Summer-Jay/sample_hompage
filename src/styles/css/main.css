@@ -4,8 +4,52 @@
   background-color: #000;
   text-align: center;
   color: #fff;
+  min-width: 600px;
 }
 
 .header_description {
   line-height: 3;
+}
+
+.slider_wrapper {
+  width: 100vw-3px;
+  height: 260px;
+  /* background-color: antiquewhite; */
+}
+
+.slider_container {
+  height: 260px;
+  width: 600px;
+  /* background-color: aquamarine; */
+  text-align: center;
+  margin: 0px auto;
+  /* overflow: hidden; */
+}
+
+.picture_list {
+  width: 2400px;
+  height: 260px;
+}
+
+.slide_bundle {
+  padding-left: 0px;
+}
+
+.slide_bundle .slide_item {
+  list-style: none;
+  float: left;
+}
+
+.slider_container .arrow_left {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 190px;
+}
+
+.slider_container .arrow_right {
+  display: block;
+  position: absolute;
+  top: 170px;
+  right: 190px;
 }
