@@ -4,9 +4,11 @@ import Header from "components/HomepageMain/Header";
 import MainSlider from "components/HomepageMain/MainSlider";
 
 const Main = (props) => {
+  const [topmenu, setTopMenu] = useState("slider");
+
   return (
     <>
-      <Header />
+      <Header setTopMenu={setTopMenu} />
       <MainSlider />
     </>
   );
