@@ -8,27 +8,22 @@ import arrowLeft from "styles/img/arrow_left.svg";
 import arrowRight from "styles/img/arrow_right.svg";
 
 const MainSlider = (props) => {
-  const [nowPosit, setNowPosit] = useState(1);
+  const [nowPosit, setNowPosit] = useState(0);
 
-  const moveToLeftImg = () => {
-    console.log("moveToLeftImg");
-    let moveWidth = 600 * nowPosit;
-    console.log("moveWidth", moveWidth);
-    document.querySelector(
-      ".picture_list"
-    ).style.transform = `translate(${moveWidth}px)`;
-    setNowPosit(nowPosit - 1);
+  const moveImg = (direc) => {
+    if (direc === "left") {
+      setNowPosit(nowPosit - 1);
+    } else {
+      setNowPosit(nowPosit + 1);
+    }
   };
 
-  const moveToRightImg = () => {
-    console.log("moveToRightImg");
-    let moveWidth = 600 * nowPosit;
-    console.log("moveWidth", moveWidth);
-    document.querySelector(
-      ".picture_list"
-    ).style.transform = `translate(-${moveWidth}px)`;
-    setNowPosit(nowPosit + 1);
-  };
+  useEffect(() => {
+    console.log("nowposit", nowPosit);
+    document.querySelector(".picture_list").style.transform = `translate(-${
+      600 * nowPosit
+    }px)`;
+  }, [nowPosit]);
 
   return (
     <div className="slider_wrapper">
@@ -49,14 +44,18 @@ const MainSlider = (props) => {
             </li>
           </ul>
         </div>
-        {nowPosit !== 1 && (
-          <img className="arrow_left" src={arrowLeft} onClick={moveToLeftImg} />
+        {nowPosit !== 0 && (
+          <img
+            className="arrow_left"
+            src={arrowLeft}
+            onClick={() => moveImg("left")}
+          />
         )}
-        {nowPosit !== 4 && (
+        {nowPosit !== 3 && (
           <img
             className="arrow_right"
             src={arrowRight}
-            onClick={moveToRightImg}
+            onClick={() => moveImg("right")}
           />
         )}
       </div>
