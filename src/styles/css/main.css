@@ -23,7 +23,8 @@
   /* background-color: aquamarine; */
   text-align: center;
   margin: 0px auto;
-  /* overflow: hidden; */
+  overflow: hidden;
+  position: relative;
 }
 
 .picture_list {
@@ -43,13 +44,13 @@
 .slider_container .arrow_left {
   display: block;
   position: absolute;
-  top: 170px;
-  left: 190px;
+  top: 110px;
+  left: 20px;
 }
 
 .slider_container .arrow_right {
   display: block;
   position: absolute;
-  top: 170px;
-  right: 190px;
+  top: 110px;
+  right: 20px;
 }
