@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Switch>
       <Route exact path="/" component={Main} />
-      <Route exact path="/sliderExample" component={MainSlider} />
+      {/* <Route exact path="/sliderExample" component={MainSlider} /> */}
     </Switch>
   );
 };

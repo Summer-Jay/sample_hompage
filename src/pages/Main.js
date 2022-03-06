@@ -9,7 +9,7 @@ const Main = (props) => {
   return (
     <>
       <Header setTopMenu={setTopMenu} />
-      <MainSlider />
+      {/* <MainSlider /> */}
     </>
   );
 };

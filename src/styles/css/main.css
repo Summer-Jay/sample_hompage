@@ -16,9 +16,10 @@
 .main_header_wrapper .topMenu_wrapper {
   position: absolute;
   top: -2px;
-  left: 500px;
+  left: 300px;
 }
-cd .topMenu_bundle .topMenu_item {
+
+.topMenu_bundle .topMenu_item {
   list-style: none;
   float: left;
   padding-right: 30px;
@@ -49,6 +50,7 @@ cd .topMenu_bundle .topMenu_item {
 .picture_list {
   width: 2400px;
   height: 260px;
+  transition-duration: 1s;
 }
 
 .slide_bundle {
@@ -76,4 +78,25 @@ cd .topMenu_bundle .topMenu_item {
 
 .headerTap {
   list-style: none;
+}
+
+.topMenu_bundle .nav-item {
+  list-style: none;
+  float: left;
+  padding-right: 30px;
+}
+
+.tab-content {
+  width: 100vh-3px;
+}
+.tab-content .tab-pane {
+  display: none;
+}
+.tab-content .active {
+  display: block;
+}
+
+.contentsArea {
+  width: 100vw-3px;
+  background-color: aquamarine;
 }
