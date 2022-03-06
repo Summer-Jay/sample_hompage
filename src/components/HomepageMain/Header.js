@@ -16,36 +16,26 @@ const Header = (props) => {
     console.log("activetab:::", activeTab);
   }, [activeTab]);
 
+  const menuArray = ["slider", "infinite Scroll", "observe", "responsive"];
+
   return (
     <>
       <div className="main_header_wrapper">
         <span className="myLogo">JHKHP</span>
         <div className="topMenu_wrapper">
           <Nav tabs className="topMenu_bundle">
-            <NavItem>
-              <NavLink
-                className={activeTab === "slider" ? "active" : ""}
-                onClick={() => toggle("slider")}
-              >
-                Slider
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={activeTab === "infinite_scroll" ? "active" : ""}
-                onClick={() => toggle("infinite_scroll")}
-              >
-                Infinite Scroll
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={activeTab === "responsive" ? "active" : ""}
-                onClick={() => toggle("responsive")}
-              >
-                Responsive
-              </NavLink>
-            </NavItem>
+            {menuArray.map((menu, idx) => {
+              return (
+                <NavItem key={idx}>
+                  <NavLink
+                    className={activeTab === menu ? "active" : ""}
+                    onClick={() => toggle(menu)}
+                  >
+                    {menu}
+                  </NavLink>
+                </NavItem>
+              );
+            })}
           </Nav>
         </div>
       </div>
@@ -54,10 +44,13 @@ const Header = (props) => {
           <TabPane tabId="slider">
             <MainSlider />
           </TabPane>
-          <TabPane tabId="infinite_scroll">
+          <TabPane tabId="infinite Scroll">
             <InfiniteScroll />
           </TabPane>
           <TabPane tabId="responsive">
+            <Responsive />
+          </TabPane>
+          <TabPane tabId="observe">
             <Responsive />
           </TabPane>
         </TabContent>
