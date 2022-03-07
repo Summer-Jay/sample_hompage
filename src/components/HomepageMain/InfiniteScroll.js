@@ -13,28 +13,27 @@ import ex10 from "styles/img/infiniteScroll/ex10.jpg";
 import ex11 from "styles/img/infiniteScroll/ex11.jpg";
 
 const InfiniteScroll = (props) => {
+  // const showList = [ex1, ex2];
   const [showList, setShowList] = useState([ex1, ex2]);
   const [hasNext, setHasNext] = useState(true);
   const [getImgNum, setGetImgNum] = useState(0);
   const imgList = [
-    { list: [ex3, ex4] },
-    { ex5, ex6 },
-    { ex7, ex8 },
-    { ex9, ex10 },
-    { ex11 },
+    { list: [ex3] },
+    { list: [ex4] },
+    { list: [ex5] },
+    { list: [ex6] },
+    { list: [ex7] },
+    { list: [ex8] },
+    { list: [ex9] },
+    { list: [ex10] },
+    { list: [ex11] },
   ];
 
   useEffect(() => {
-    console.log("imgList", imgList[0].list);
-  }, [imgList]);
-
-  useEffect(() => {
-    console.log("getImgNum", getImgNum);
-    console.log("showList", showList);
-    if (imgList[getImgNum].length === 0) {
+    if (imgList[getImgNum]?.list?.length === undefined) {
       setHasNext(false);
     }
-  }, [getImgNum, showList]);
+  }, [getImgNum]);
 
   const handleScroll = () => {
     const scrollHeight = document.querySelector(".scrollBox").scrollHeight;
@@ -42,11 +41,13 @@ const InfiniteScroll = (props) => {
     const clientHeight = document.querySelector(".scrollBox").clientHeight;
 
     if (Math.ceil(scrollTop + clientHeight) >= scrollHeight && hasNext) {
-      console.log("scrollBottom");
-      setShowList(...showList, imgList[getImgNum].list);
-      //   showList.push(imgList[getImgNum].list);
-      //   setGetImgNum(getImgNum + 1);
+      attachNewImg();
     }
+  };
+
+  const attachNewImg = () => {
+    setShowList([...showList, imgList[getImgNum].list]);
+    setGetImgNum(getImgNum + 1);
   };
 
   useEffect(() => {
@@ -61,10 +62,13 @@ const InfiniteScroll = (props) => {
         .querySelector(".scrollBox")
         .removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   return (
     <>
+      <div className={`infiniteScrollDescription ${hasNext ? "grey" : "red"}`}>
+        hasNext : {hasNext ? "TRUE" : "FALSE"}
+      </div>
       <div className="scrollBox">
         <div className="scrollItemsWrapper">
           {showList.map((img, idx) => {
