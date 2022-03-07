@@ -90,7 +90,7 @@
 .topMenu_bundle .nav-item {
   list-style: none;
   float: left;
-  padding-right: 30px;
+  padding-right: 50px;
 }
 
 .tab-content {
@@ -117,7 +117,8 @@
 
 .scrollBox .scrollItemsWrapper {
   position: absolute;
-  left: 25vw;
+  left: 30vw;
+  width: 600px;
 }
 
 .infiniteScrollDescription {
